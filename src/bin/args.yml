@@ -1,0 +1,27 @@
+name: KvStore
+about: Learning Rust!
+version: 0.1.0
+author: JunBin
+
+args:
+    - verbose:
+          help: verbosity level
+          short: v
+          multiple: true
+    - path:
+          help: Target file you want to change
+          short: p
+          takes_value: true
+
+subcommands:
+    - set:
+          - KEY:
+                help: a string key
+          - VALUE:
+                help: The string value of the key
+    - get:
+          - KEY:
+                help: a string key
+    - rm:
+          - KEY:
+                help: a string key
